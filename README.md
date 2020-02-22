@@ -1,6 +1,6 @@
 # PySynth
 
-> PySynth is a python based synthetic testing framework
+> PySynth is a python based synthetic testing framework. Underneath, PySynth uses Selenium to spin up headless or UI based browser (webkit and gecko support available).
 
 ## How to get started
 
