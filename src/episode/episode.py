@@ -68,39 +68,58 @@ class Episode:
 				el.click()
 				return el
 
-		# check for ID and class
+			# check for ID and class
 
 		def generate_input_operation(self, step):
 			element = step['element']
 			if element == 'input':
-
 				if 'type' in step:
 					path = '//input[@type=\'' + str(step['type']) + '\']'
 					el = self.selenium_builder.element_by_path(path)
 					text = str(step['input'])
 					self.selenium_builder.input_box(el, text)
 					return el
-
 				if 'placeholder' in step:
 					path = '//input[@placeholder=\'' + str(step['placeholder']) + '\']'
 					el = self.selenium_builder.element_by_path(path)
 					text = str(step['input'])
 					self.selenium_builder.input_box(el, text)
 					return el
-
 				elif 'id' in step:
 					# check for class
 					if 'class' in step:
 						pass
 					pass
-
 				elif 'class' in step:
 					pass
-
 				else:
 					pass
-
 			else:
 				print('element must be an input')
 				exit(1)
+
+		def timeout(self, timout: int = 2):
+			time.sleep(timeout)
+
+
+		def generate_dom_elements_from_episode(self):
+			if self.episode is None:
+				print('episode not loaded')
+
+			print('Generating DOM elements for episode: ',self.episode['title'])
+			seed_driver = self.driver.get(self.episode['seed_url'])
+			for step in self.episode['steps']:
+				print('generating step: ', step['name'])
+				if step['operation'] == 'click' :
+					self.generate_click_operation(step['DOM_element'])
+				elif step['operation'] == 'input' :
+					self.generate_input_operation(step['DOM_element'])
+				else:
+					print('unindentified operation')
+					exit(1)
+
+
+# if __name__ == '__main__':
+# 	dom = SeleniumBuilder()
+# 	main()
 		
