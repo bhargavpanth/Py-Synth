@@ -35,4 +35,18 @@ class ChromeDriver:
 		return webdriver.Chrome(executable_path=self.executable_path)
 
 
+class Chrome:
+	def __init__(self):
+		self.executable_path = ChromeDriverManager().install()
+		self.command_executor = 'http://localhost:4444/wd/hub'
+		self.capabilities = DesiredCapabilities.CHROME
+		self.chrome = ChromeDriver(self.executable_path, self.command_executor, self.capabilities)
+	
+	def create_browser(self):
+		return self.chrome.get_chrome_driver()
+
+	def create_headless_browser(self):
+		return self.chrome.get_headless_chrome_driver()
+
+
 
