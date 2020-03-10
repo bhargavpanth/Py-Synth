@@ -35,23 +35,21 @@ class Episode:
 
 	def generate_click_operation(self, step):
 		element = step['element']
-
+		# anchor tag
 		if element == 'anchor':
 			if 'text' in step:
 				el = self.selenium_builder.find_element_with_link(step['text'])
 				el.click()
 				time.sleep(1)
 				return el
-		# else:
-		# 	return self.selenium_builder.
-
+		# button tag
 		elif element == 'button':
 			if 'text' in step:
 				path = '//button[text()=\'' + step['text'] + '\']'
 				el = self.selenium_builder.find_element()
 				el.click()
 				return el
-			
+
 			elif 'id' in step:
 				pass
 			

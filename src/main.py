@@ -24,12 +24,7 @@ def main():
 	episodeReader = Episode(driver, './episodes/login_with_email.json')
 
 	episode = episodeReader.read_episode()
-
-	episodeReader.generate_dom_elements_from_episode()
-
-	# print(episode)
-
-
+	episode.generate_dom_elements_from_episode()
 
 '''
 def main():

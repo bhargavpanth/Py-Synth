@@ -4,3 +4,5 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Edge(executable_path=EdgeChromiumDriverManager().install())
+
+# EDGE is current not supported
