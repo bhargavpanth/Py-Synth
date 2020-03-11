@@ -12,21 +12,21 @@ from episode.episode import Episode
 from selenium.webdriver.common.by import By
 
 # '''
-def main():
-	print(os.getcwd())
+# def main():
+# 	print(os.getcwd())
 
-	# firefox = Firefox()
-	# driver = firefox.create_browser()
+# 	# firefox = Firefox()
+# 	# driver = firefox.create_browser()
 
-	chrome = Chrome()
-	driver = chrome.create_browser()
+# 	chrome = Chrome()
+# 	driver = chrome.create_browser()
 
-	episodeReader = Episode(driver, './episodes/login_with_email.json')
+# 	episodeReader = Episode(driver, './episodes/login_with_email.json')
 
-	episode = episodeReader.read_episode()
-	episode.generate_dom_elements_from_episode()
+# 	episode = episodeReader.read_episode()
+# 	episode.generate_dom_elements_from_episode()
 
-'''
+
 def main():
 	firefox = Firefox()
 	driver = firefox.create_browser()
@@ -51,7 +51,7 @@ def main():
 	# fill up
 	three = driver.find_element_by_xpath("//input[@type='email']")
 	time.sleep(1)
-	three.send_keys('bhargav@sphere.me')
+	three.send_keys('johndoe@mailinator.com')
 
 	# click
 	four = driver.find_element(By.XPATH, "//span[text()='Sign in']")
@@ -67,7 +67,6 @@ def main():
 	driver.close()
 
 	print(end-start)
-'''
 
 main()
 
