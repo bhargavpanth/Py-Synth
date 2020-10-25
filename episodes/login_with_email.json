@@ -21,7 +21,7 @@
 		"DOM_element": {
 			"element": "input",
 			"type": "email",
-			"input": "bhargav@sphere.me"
+			"input": "test@mailinator.com"
 		}
 	}, {
 		"name": "send_email",
