@@ -1,0 +1,34 @@
+{
+	"title": "login_with_email",
+	"seed_url": "https://beta.sphere.me",
+	"steps": [{
+		"name": "signing_in",
+		"operation": "click",
+		"DOM_element": {
+			"element": "anchor",
+			"text": "Sign in"
+		}
+	}, {
+		"name": "singing_in_with_email",
+		"operation": "click",
+		"DOM_element": {
+			"element": "anchor",
+			"text": "Sign in with email"
+		}
+	}, {
+		"name": "input_email",
+		"operation": "input",
+		"DOM_element": {
+			"element": "input",
+			"type": "email",
+			"input": "bhargav@sphere.me"
+		}
+	}, {
+		"name": "send_email",
+		"operation": "click",
+		"DOM_element": {
+			"element": "span",
+			"text": "Sign in"
+		}
+	}]
+}
