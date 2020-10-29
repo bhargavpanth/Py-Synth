@@ -22,5 +22,3 @@ Every episode consists of the following properties `title` `seed_url` `steps`. `
 
 `name` accepts a string property
 `operation` accepts one of `click` or `input`
-
-
