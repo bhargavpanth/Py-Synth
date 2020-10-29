@@ -11,6 +11,8 @@ Ask for a default browser
 Step 4
 '''
 
+# Setup installation is WIP
+
 import os
 from typing import List
 
