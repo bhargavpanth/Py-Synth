@@ -7,15 +7,11 @@ Requirements
 * Python3
 * Docker
 
-Clone the repository
-```bash
-$ git clone https://github.com/bhargavpanth/Py-Synth.git
-```
-Run `docker-compose up`
-
-Install the requirements from `requirements.txt`
-
-Add an episode in the `./episodes` folder
+Get started
+* `$ git clone https://github.com/bhargavpanth/Py-Synth.git`
+* Run `docker-compose up`
+* Install the requirements from `requirements.txt`
+* Add an episode in the `./episodes` folder
 
 ## How to define an episode
 Every episode consists of the following properties `title` `seed_url` `steps`. `steps` in turn is an array of objects where each object consists of `name`, `operation`, `DOM_element`.
